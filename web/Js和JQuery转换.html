@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS和JQuert转化</title>
+        <script src="js/jquery-3.3.1.min.js"></script>
+
+    </head>
+    <body>
+        <div id="div1">div1...</div>
+        <div id="div2">div2...</div>
+        <script>
+            //js获得标签体
+            var divs = document.getElementsByTagName("div");
+            alert(divs.length);
+            //遍历
+            for (var i = 0; i < divs.length; i++) {
+                // divs[i].innerHTML = "aaa"
+                $(divs[i]).html("ccc")
+            }
+            //jq获取div标签
+            var $div = $("div");
+            alert($div.length)
+            // $div.html("bbb")
+            $div[0].innerHTML="eee";
+            /*
+            JQuery对象在操作时，更加方便
+            与JS不通用
+            相互转换
+                jq->js:jq[索引]
+                js-->jq:$(js对象)
+             */
+        </script>
+    </body>
+</html>
