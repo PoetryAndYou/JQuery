@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+        <script>
+            function hideFn() {
+                //默认
+                // $("#showDiv").hide("slow", "swing", function () {
+                //
+                // });
+                //滑动
+                // $("#showDiv").slideUp("slow", "swing")
+                //淡出
+                $("#showDiv").fadeOut("slow", "swing")
+            }
+
+            function showFn() {
+                // $("#showDiv").show("slow", "swing", function () {
+                //
+                // })
+                $("#showDiv").fadeIn("slow", "swing")
+            }
+
+            function toggleFn() {
+                // $("#showDiv").toggle("slow", "swing", function () {
+                //
+                // })
+                $("#showDiv").fadeToggle("first", "swing")
+            }
+        </script>
+    </head>
+    <body>
+
+        <input type="button" value="点击按钮隐藏div" onclick="hideFn()">
+        <input type="button" value="点击按钮显示div" onclick="showFn()">
+        <input type="button" value="点击按钮切换div显示和隐藏" onclick="toggleFn()">
+
+        <div id="showDiv" style="width:300px;height:300px;background:pink">
+            div显示和隐藏
+            <img src="/03.QQ表情选择/img/01.gif" >
+            <img src="01.gif" height="22" width="22" alt=""/>
+        </div>
+    </body>
+</html>
